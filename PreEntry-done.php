@@ -57,7 +57,7 @@
             require 'phpmailer/send.php'; // メールを送る＆仮登録完了ページへ
         }
     } catch(Exception $e) {
-        print '<p class="text2">ただいま障害により大変ご迷惑をおかけしております。</p>';
+        echo '<p class="text2">ただいま障害により大変ご迷惑をおかけしております。</p>';
         exit(); // 強制終了
     }
 ?>
