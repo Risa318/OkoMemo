@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'メイリオ', 'Meiryo', sans-serif;
+}
+a{
+    text-decoration: none; /*リンクの下線削除*/
+}
+
+.container{
+	padding: 0 30px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*ヘッダー*/
+.header{
+	height: 70px;  /* 高さ100px */
+	width: 100%;  /* 幅を最大まで広げる */
+	box-shadow: 0 0 10px black;  /* 下に影をつける */
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+	position: fixed;  /* 固定表示 */
+	top: 0;  /* 画面上部から0の位置に表示 */
+}
+.header-left{
+    float: left;
+}
+.header-logo{
+    margin-left: 100%;
+    line-height: 70px;
+    font-family: serif;
+    font-size: 24px;
+    color: black;
+}
+/*メニュー*/
+.header-right{
+    float: right;
+    margin-right: 1%;
+}
+.header-right a{
+    color: black;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 70px;
+    padding: 25px 5px;
+}
+.header-right a:hover{
+    animation: menu 2s;
+}
+@keyframes menu{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.clear{
+	clear: both;  /* 回り込み解除 */
+}
+
+/*フッターの設定*/
+.wrapper{
+    min-height: 500px;
+    position: relative;
+}
+footer{
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    color: block;
+    text-align: center;
+    padding: 30px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+/*ログイン前トップページ用*/
+.top{
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+}
+.top h1{
+    font-family: serif;
+    text-align: center;
+    border-bottom: solid 1px;
+    margin-bottom: 30px;
+}
+.top p{
+    font-size: 16px;
+    line-height: 200%;
+}
+/*ログイン前トップページのメニュー*/
+.menu{
+    margin-top: 12%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.menu a{
+    color: black;
+    font-size: 20px;
+    margin: 12%;
+}
+.menu a:hover{
+    border-bottom: solid 1px;
+	transition: border-bottom 0.5s;
+}
+
+ /*入力フォームのスタイル*/   
+.form{
+    margin-top: 10%;
+    color: #5a5c5f;
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.form-title{
+    margin-bottom: 15px;
+    color: black;
+    text-align: center;
+}
+.form-action h3{ /*見出しの設定*/
+	margin-top: 20px;
+	margin-bottom: 5px;
+	color: #4c4e52;
+}
+.form-text{
+    width: 400px;
+}
+input{
+	font-size: 15px;
+	padding: 2px 4px;
+}
+/*送信ボタンの設定*/
+.submit-button{ 
+	margin-top: 20px;
+	font-size: 18px;
+	width: 80px;
+}
+/*エラー文用*/
+.error{
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    margin-top: 8%;
+}
+/*会員登録エラー用*/
+.entryError{
+    color: red;
+    margin-top: 20%;
+    text-align: center;
+    font-size: 20px;
+}
+.entryError2{
+    color: #5a5c5f;
+    margin-top: 20%;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/*メール送信完了のお知らせメッセージのスタイル*/
+.text{
+    margin-top: 20%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 200%;
+}
+/*会員登録完了のメッセージ*/
+.text2{
+    margin-top: 20%;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*合計残高表示のスタイル*/
+.total{
+    text-align: center;
+    font-size: 30px;
+    color: #5a5c5f;
+    border-bottom: dashed 1px #66CDAA;
+    padding-bottom: 20px;
+    width: 600px;
+    padding: 0 30px;
+	margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+    margin-bottom: 50px;
+}
+
+/*口座表示のスタイル*/
+.box {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    margin: 2em auto;
+    width: 300px;
+    font-weight: bold;
+    border: solid 3px #000000;
+}
+.box p {
+    text-align: center;
+    font-family: serif;
+    margin: 0; 
+    padding: 0;
+    color: black;
+}
+
+/*ログイン後のタイトル(見出し)設定*/
+.top_lo{
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.top_lo h1{
+    font-family: serif;
+    text-align: center;
+    border-bottom: solid 1px;
+    margin-bottom: 30px;
+}
+
+/* ログアウトページの文字とボタンの設定 */
+.top_lo p{ /*文字の設定*/
+    font-size: 20px;
+    line-height: 40px;
+}
+.logout-button {  /*ボタン全体の位置設定*/
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+.button-no { /*ボタンの間を空ける*/
+    margin-left: 100px;
+}
+.top_lo input{ /*ボタンの大きさを大きくする*/
+    width: 100px;
+}
+
+/*お問い合わせの設定*/
+.check{ /*送信内容確認*/
+    margin-top: 10%;
+    margin-bottom: 50px;
+    align-items: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.check h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px black;
+    color: #5a5c5f;
+}
+.check h2{
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.check-form{
+    text-align: center;
+}
+.check-form p{
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+.check-button input{
+    width: 100px;
+}
