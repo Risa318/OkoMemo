@@ -39,7 +39,7 @@
             // 仮登録用のCookie削除
             setcookie('entry', "", time() - 100);           
         } catch(Exception $e) {
-            print '<p class="text2">ただいま障害により大変ご迷惑をおかけしております。</p>';
+            echo '<p class="text2">ただいま障害により大変ご迷惑をおかけしております。</p>';
             exit(); // 強制終了    
         }
 
