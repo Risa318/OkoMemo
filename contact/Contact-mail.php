@@ -64,7 +64,7 @@
     $mailTo->Body  = $body; // メール本文
     // メール送信の実行
     if(!$mailTo->send()) {
-        echo "<p class='error'>メールの送信に失敗しました。メールアドレスをもう一度ご確認の上入力してください。</p>";
+        echo "<p class='error'>メールの送信に失敗しました。障害が発生しています。</p>";
         exit();
     } else { // メールが送れたら実行
         header('Location: Contact-pre-done.php');
