@@ -116,7 +116,7 @@
                         }    
                     }        
                 } catch(Exception $e) {
-                    print '<p class="text2" style="margin-top: 100px;">ただいま障害により大変ご迷惑をおかけしております。</p>';
+                    echo '<p class="text2" style="margin-top: 100px;">ただいま障害により大変ご迷惑をおかけしております。</p>';
                     exit();
                 }    
             } else {
@@ -186,7 +186,7 @@
                         echo "</a>";
                     }                        
                 } catch(Exception $e) {
-                    print '<p class="text2" style="margin-top: 100px;">ただいま障害により大変ご迷惑をおかけしております。</p>';
+                    echo '<p class="text2" style="margin-top: 100px;">ただいま障害により大変ご迷惑をおかけしております。</p>';
                 }
             } else {
                 header('Location: index.php'); // ログイン前トップページへ
