@@ -1,28 +1,33 @@
 <?php
-    $select = $_POST['select'];
-    $content = $_POST['content'];
-    $name = $_COOKIE['userName'];
-
-    $select = htmlspecialchars($select, ENT_QUOTES, 'UTF-8');
-    $content = htmlspecialchars($content, ENT_QUOTES, 'UTF-8');
-
-    // データベースに接続
-    $dsn = 'mysql:dbname=データベース名;host=ホスト名;charset=utf8';
-    $user = 'ユーザー名';
-    $password = 'パスワード';
-    $dbh = new PDO($dsn, $user, $password);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
+        $select = $_POST['select'];
+        $content = $_POST['content'];
+        $name = $_COOKIE['userName'];
     
-    // 登録されている名前とメールアドレスを全て取得
-    $sql = 'SELECT name,mail FROM registers WHERE 1';
-    $stmt = $dbh->query($sql);
-    $results = $stmt->fetchAll();
-    $dbh = null; // 切断
-    // メールアドレスを取得
-    foreach($results as $row) {
-        if($name == $row['name']) {
-            $mail = $row['mail'];
-        }
+        $select = htmlspecialchars($select, ENT_QUOTES, 'UTF-8');
+        $content = htmlspecialchars($content, ENT_QUOTES, 'UTF-8');
+    
+        // データベースに接続
+        $dsn = 'mysql:dbname=データベース名;host=ホスト名;charset=utf8';
+        $user = 'ユーザー名';
+        $password = 'パスワード';
+        $dbh = new PDO($dsn, $user, $password);
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+        // 登録されている名前とメールアドレスを全て取得
+        $sql = 'SELECT name,mail FROM registers WHERE 1';
+        $stmt = $dbh->query($sql);
+        $results = $stmt->fetchAll();
+        $dbh = null; // 切断
+        // メールアドレスを取得
+        foreach($results as $row) {
+            if($name == $row['name']) {
+                $mail = $row['mail'];
+            }
+        }    
+    } catch(Exception $e) {
+        echo '<p class="text2">ただいま障害により大変ご迷惑をおかけしております。</p>';
+        exit(); // 強制終了
     }
 ?>
 <!DOCTYPE html>
