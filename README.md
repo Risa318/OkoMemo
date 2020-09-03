@@ -1,6 +1,7 @@
 # OkoMemo
 
-
+動いている様子
+https://miyaibefore003.sakura.ne.jp/OkoMemo/index.php
 
 「シンプルなおこづかいのメモ帳」がテーマです。
  
