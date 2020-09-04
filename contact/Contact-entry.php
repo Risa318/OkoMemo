@@ -16,8 +16,8 @@
         <div class="header">
             <div class="coutainer">
                 <div class="header-left">
-                    <a href="../index.php">
-                        <h1 class="header-logo">OkoMemo</h1>
+                    <a href="../TopPage.php" class="header-logo">
+                        <img src="../images/okomemo-logo.png" alt="ロゴ">
                     </a>
                 </div>
                 <!--メニュー-->

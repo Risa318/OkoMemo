@@ -30,12 +30,13 @@ a{
     float: left;
 }
 .header-logo{
-    margin-left: 100%;
-    line-height: 70px;
-    font-family: serif;
-    font-size: 24px;
-    color: black;
+    height: 50px;
+    width: 172px;
+    display: block;
+    margin-left: 100px;
+    margin-top: 15px;
 }
+
 /*メニュー*/
 .header-right{
     float: right;
