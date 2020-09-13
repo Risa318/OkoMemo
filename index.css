@@ -62,17 +62,16 @@ a{
 
 /*フッターの設定*/
 .wrapper{
-    min-height: 500px;
-    position: relative;
+    margin-top: 200px;
 }
 footer{
     width: 100%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 10px black;
     color: block;
     text-align: center;
     padding: 30px 0;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 
@@ -155,7 +154,7 @@ input{
 }
 .entryError2{
     color: #5a5c5f;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-bottom: 50px;
     text-align: center;
     font-size: 14px;
