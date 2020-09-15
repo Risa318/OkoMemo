@@ -23,8 +23,8 @@
         . " ("
         . "id INT AUTO_INCREMENT PRIMARY KEY,"
         . "name char(32) NOT NULL,"  // アカウント名
-        . "pass char(32) NOT NULL,"  // パスワード
-        . "mail char(32) NOT NULL"   // メールアドレス
+        . "pass char(50) NOT NULL,"  // パスワード
+        . "mail char(50) NOT NULL"   // メールアドレス
         . ");";
         $stmt = $dbh->query($sql); 
         
